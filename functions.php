@@ -75,6 +75,7 @@ function goodswave_gift_init() {
 		'has_archive'        => true,
 		'hierarchical'       => false,
 		'menu_position'      => null,
+		'menu_icon' 		 => 'dashicons-align-left',
 		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
 		'taxonomy'		     => array('post_tag')
 	);
@@ -84,7 +85,7 @@ function goodswave_gift_init() {
 
 add_action( 'init', 'goodswave_home_init' );
 /**
- * Register a home post type.
+ * Register a home post type. 
  *
  * @link http://codex.wordpress.org/Function_Reference/register_post_type
  */
@@ -119,6 +120,7 @@ function goodswave_home_init() {
 		'has_archive'        => true,
 		'hierarchical'       => false,
 		'menu_position'      => null,
+		'menu_icon' 		 => 'dashicons-align-left',
 		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
 		'taxonomy'		     => array('post_tag')
 	);
@@ -163,6 +165,7 @@ function goodswave_office_init() {
 		'has_archive'        => true,
 		'hierarchical'       => false,
 		'menu_position'      => null,
+		'menu_icon' 		 => 'dashicons-align-left',
 		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
 		'taxonomy'		     => array('post_tag')
 	);
