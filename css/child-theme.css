@@ -10867,3 +10867,17 @@ a:hover {
 .entry-meta {
   font-size: .8em;
   color: darkslategray; }
+
+.switcher .option {
+  background-color: transparent;
+  max-height: none; }
+
+.switcher .selected {
+  background: transparent; }
+
+.switcher {
+  width: 100px; }
+
+.menu-item-gtranslate {
+  width: 25px;
+  padding-top: 7px; }
