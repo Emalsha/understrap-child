@@ -31,6 +31,25 @@ add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
 
 
 /**
+ * 
+ * Read more text editing
+ * 
+ */
+
+function modify_read_more_link() {
+    return '<a class="more-link" href="' . get_permalink() . '">View list..</a>';
+}
+add_filter( 'the_content_more_link', 'modify_read_more_link' );
+
+// Replaces the excerpt "Read More" text by a link
+function new_excerpt_more($more) {
+	global $post;
+ return '<a class="moretag" href="'. get_permalink($post->ID) . '"> View all...</a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
+
+
+/**
  * -----------------------------
  *  Goodswave Custom Post types
  * -----------------------------
@@ -76,7 +95,7 @@ function goodswave_gift_init() {
 		'hierarchical'       => false,
 		'menu_position'      => null,
 		'menu_icon' 		 => 'dashicons-align-left',
-		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments','block-editor' ),
 		'taxonomy'		     => array('post_tag')
 	);
 
@@ -121,7 +140,7 @@ function goodswave_home_init() {
 		'hierarchical'       => false,
 		'menu_position'      => null,
 		'menu_icon' 		 => 'dashicons-align-left',
-		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments', 'block-editor' ),
 		'taxonomy'		     => array('post_tag')
 	);
 
@@ -166,7 +185,7 @@ function goodswave_office_init() {
 		'hierarchical'       => false,
 		'menu_position'      => null,
 		'menu_icon' 		 => 'dashicons-align-left',
-		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments', 'block-editor' ),
 		'taxonomy'		     => array('post_tag')
 	);
 
