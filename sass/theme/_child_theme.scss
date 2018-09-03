@@ -90,6 +90,10 @@ a:hover{
 }
 
 // GTranslate css edits
+.switcher{
+    width: 100px;
+}
+
 .switcher .option{
     background-color: transparent;
     max-height: none;
@@ -97,10 +101,6 @@ a:hover{
 
 .switcher .selected{
     background: transparent;
-}
-
-.switcher{
-    width: 100px;
 }
 
 .menu-item-gtranslate{
