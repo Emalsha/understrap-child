@@ -10869,15 +10869,19 @@ a:hover {
   color: darkslategray; }
 
 .switcher {
-  width: 100px; }
+  width: 100px !important; }
 
 .switcher .option {
-  background-color: transparent;
-  max-height: none; }
+  background-color: transparent !important;
+  max-height: none !important;
+  border: none !important; }
 
 .switcher .selected {
-  background: transparent; }
+  background: transparent !important; }
+
+.switcher .selected a {
+  border: none !important; }
 
 .menu-item-gtranslate {
-  width: 25px;
-  padding-top: 7px; }
+  width: 25px !important;
+  padding-top: 7px !important; }
