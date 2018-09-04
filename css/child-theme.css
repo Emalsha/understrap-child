@@ -10804,9 +10804,13 @@ a.skip-link {
     28th Aug 2018
     
 */
-/* Primary view */
+/* Boostrap primary view changes */
 .bg-primary {
-  background-color: #00BCD4 !important; }
+  background-color: #009688 !important; }
+
+.btn-primary {
+  background-color: #009688;
+  border-color: #00796B; }
 
 body {
   font-family: "PT Sans Caption", sans-serif;
@@ -10844,7 +10848,7 @@ h2 {
       color: #757575; }
 
 a {
-  color: #0097A7; }
+  color: #00796B; }
   a:hover {
     text-decoration: none;
     color: #757575; }
@@ -10879,9 +10883,16 @@ a {
   color: #fff; }
 
 /* Gift post cards */
-.card-columns {
+.gift .card-columns {
   -webkit-column-count: 2;
           column-count: 2; }
+
+.gift .card-title {
+  font-size: 1.3rem; }
+
+.gift p {
+  text-align: justify;
+  font-size: .8rem; }
 
 @media screen and (max-width: 992px) {
   .card-columns {

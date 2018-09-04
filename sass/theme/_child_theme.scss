@@ -5,9 +5,14 @@
     
 */
 
-/* Primary view */
+/* Boostrap primary view changes */
 .bg-primary{
     background-color: $primary-color !important;
+}
+
+.btn-primary{
+    background-color: $primary-color;
+    border-color: $primary-color-dark;
 }
 
 body{
@@ -94,9 +99,27 @@ a {
 }
 
 /* Gift post cards */
-.card-columns{
-    column-count: 2;
+.gift{
+    .card-columns{
+        column-count: 2;
+    }
+
+    .card-title{
+        font-size: 1.3rem;
+    }
+
+    p{
+        text-align: justify;
+        font-size: .8rem;
+    }
+
+    // .understrap-read-more-link{
+
+    // }
 }
+
+
+
 
 @media screen and (max-width: 992px) {
     .card-columns{

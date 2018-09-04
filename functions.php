@@ -41,13 +41,19 @@ function modify_read_more_link() {
 }
 add_filter( 'the_content_more_link', 'modify_read_more_link' );
 
-// Replaces the excerpt "Read More" text by a link
-function new_excerpt_more($more) {
-	global $post;
- return '<a class="moretag" href="'. get_permalink($post->ID) . '"> View all...</a>';
+/**
+ * Filter the "read more" excerpt string link to the post.
+ *
+ * @param string $more "Read more" excerpt string.
+ * @return string (Maybe) modified "read more" excerpt string.
+ */
+function wpdocs_excerpt_more( $more ) {
+    return sprintf( '<a class="understrap-read-more-link goodswave-read-more" href="%1$s">%2$s</a>',
+        get_permalink( get_the_ID() ),
+        __( 'Read More', 'textdomain' )
+    );
 }
-add_filter('excerpt_more', 'new_excerpt_more');
-
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 
 /**
  * -----------------------------
