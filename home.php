@@ -15,28 +15,40 @@
 get_header();
 
 $container   = get_theme_mod( 'understrap_container_type' );
+
 ?>
 
-
+<link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
 <div class="clearfix" id="index-wrapper">
 
     <div class="section-intro" id="section-intro">
 
-        <div class="row h-100 p-3 justify-content-center align-items-center m-0">
-            <h1 class="col-12 text-center position-absolute welcome-line-1 d-none-edited" id="welcome-line-1">WELCOME</h1>
-            <h3 class="col-12 text-center position-absolute welcome-line-2 d-none-edited" id="welcome-line-2">Looking for GIFT ?</h3>
-            <h2 class="col-12 text-center position-absolute welcome-line-3 d-none-edited" id="welcome-line-3">Best gift , home appliance or office decoration for you!</h2>
-            <div class="col-12 text-center position-absolute welcome-line-4 d-none-edited" id="welcome-line-4">
-                <div class="col-md-4 col-sm-12 flex-right d-inline-block">
-                    <div class="bg-primary border">
-                        <h1>GIFT</h1>
+        <div class="row h-100 p-3 justify-content-center align-items-center m-0 welcome-intro">
+            <h3 class="col-12 text-center position-absolute welcome-line-1 d-none-edited" id="welcome-line-1">WELCOME</h3>
+            <h3 class="col-12 text-center position-absolute welcome-line-2 d-none-edited" id="welcome-line-2">Looking for <span>GIFT</span> ?</h3>
+            <h3 class="col-12 text-center position-absolute welcome-line-3 d-none-edited" id="welcome-line-3"><span>HOME / OFFICE</span> decoration ?</h3>
+            <h3 class="col-12 text-center position-absolute welcome-line-4 d-none-edited" id="welcome-line-4">You in the best place !!</h3>
+            <div class="row w-100 text-center position-absolute welcome-line-5 d-none-edited" id="welcome-line-5">
+                <div class="col-md-3 col-sm-12 d-inline-block">
+                    <div class="bg-brush" >
+                        <a href="<?php echo get_home_url(null,'index.php/home-appliance'); ?>"><h2><span>HOME</span></h2></a>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-12 flex-right d-inline-block">
-                    <div class="bg-primary border">
-                        <h1>GIFT</h1>
+                <div class="col-md-3 col-sm-12 d-inline-block">
+                    <div class="bg-brush">
+                        <a href="<?php echo get_home_url(null,'index.php/gift'); ?>"><h2><span>GIFT</span></h2></a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-12 d-inline-block">
+                    <div class="bg-brush">
+                        <a href="<?php echo get_home_url(null,'index.php/office-decoration'); ?>"><h2><span>OFFICE</span></h2></a>
                     </div>
                 </div>    
+                <div class="col-md-12 d-block">
+                    <p class="small text-white d-block">select or go down</p>
+                    <div id="scroll-down" class="d-block mx-auto"></div>
+                </div>
             </div>
 
         </div>
