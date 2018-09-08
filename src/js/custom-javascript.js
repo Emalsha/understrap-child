@@ -14,18 +14,49 @@
 
         $(function(){
 
-            var animationEnd = 'animationend oAnimationEnd mozAnimationEnd webkitAnimationEnd';
-            var animation = 'animated fadeInUp';
+            var line_1 = $('#welcome-line-1');
+            var line_2 = $('#welcome-line-2');
+            var line_3 = $('#welcome-line-3');
+            var line_4 = $('#welcome-line-4');
 
-            var line_1 = $('.welcome-line-1');
-            
-            line_1.addClass(animation).one(animationEnd,function(){
-                line_1.removeClass(animation);
-                line_1.addClass('animated fadeOut');
+            var line_animation = function(selector,delay){
+                var dfd = $.Deferred();
+                selector
+                    .css('opacity', 0)
+                    .slideDown('slow')
+                    .animate(
+                        { opacity: 1 },
+                        { queue: false, duration: 'slow' }
+                    )
+                    .delay(delay)
+                    .slideUp('slow',function () {
+                        dfd.resolve("promise");
+                    });
+
+                return dfd.promise();
+            }
+
+            var box_animation = function(selector){
+                selector
+                    .css('opacity', 0)
+                    .slideDown('slow')
+                    .animate(
+                        { opacity: 1 },
+                        { queue: false, duration: 'slow' }
+                    )
+            }
+
+            $.when(line_animation(line_1,1000))
+            .then(function(){
+                line_animation(line_2,2000)
+                .then(function(){
+                    line_animation(line_3,3000)
+                    .then(function(){
+                        box_animation(line_4)
+                    })
+                })
             });
-            line_1.animate({
-                marginBottom: "20px",
-            },5000);
+
         });
 
     })

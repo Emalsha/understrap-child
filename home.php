@@ -23,9 +23,22 @@ $container   = get_theme_mod( 'understrap_container_type' );
     <div class="section-intro" id="section-intro">
 
         <div class="row h-100 p-3 justify-content-center align-items-center m-0">
-            <h1 class="col-12 text-center position-absolute welcome-line-1 ">WELCOME</h1>
-            <h3 class="col-12 text-center position-absolute welcome-line-2 ">We are here to help you find,</h3>
-            <h2 class="col-12 text-center position-absolute welcome-line-3 ">Best gift , home appliance or office decoration for you!</h2>
+            <h1 class="col-12 text-center position-absolute welcome-line-1 d-none-edited" id="welcome-line-1">WELCOME</h1>
+            <h3 class="col-12 text-center position-absolute welcome-line-2 d-none-edited" id="welcome-line-2">Looking for GIFT ?</h3>
+            <h2 class="col-12 text-center position-absolute welcome-line-3 d-none-edited" id="welcome-line-3">Best gift , home appliance or office decoration for you!</h2>
+            <div class="col-12 text-center position-absolute welcome-line-4 d-none-edited" id="welcome-line-4">
+                <div class="col-md-4 col-sm-12 flex-right d-inline-block">
+                    <div class="bg-primary border">
+                        <h1>GIFT</h1>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 flex-right d-inline-block">
+                    <div class="bg-primary border">
+                        <h1>GIFT</h1>
+                    </div>
+                </div>    
+            </div>
+
         </div>
 
         <!-- <svg xmlns="http://www.w3.org/2000/svg" id="intro-svg" viewBox="0 0 1920 1080">
