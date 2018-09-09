@@ -12,8 +12,8 @@
                         $('.navbar').fadeIn();
                         $('.navbar').addClass('fixed-top');
                     }else{
-                        $('.navbar').fadeOut();
                         $('.navbar').removeClass('fixed-top');
+                        $('.navbar').fadeOut();
                     }
                 })
             });
