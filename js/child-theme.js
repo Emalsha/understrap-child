@@ -3980,16 +3980,21 @@
 (function($){
 
     $(document).ready(function(){
-        $('.navbar').hide();
-        $(function(){
-            $(window).scroll(function(){
-                if($(this).scrollTop() > 100){
-                    $('.navbar').fadeIn();
-                }else{
-                    $('.navbar').fadeOut();
-                }
-            })
-        });
+        
+        var is_root = location.pathname == "/";
+        if(is_root){
+            $('.navbar').removeClass('fixed-top');
+            $('.navbar').hide();
+            $(function(){
+                $(window).scroll(function(){
+                    if($(this).scrollTop() > 100){
+                        $('.navbar').fadeIn();
+                    }else{
+                        $('.navbar').fadeOut();
+                    }
+                })
+            });
+        }
 
         $(function(){
 
