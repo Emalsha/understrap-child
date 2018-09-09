@@ -10,8 +10,10 @@
                 $(window).scroll(function(){
                     if($(this).scrollTop() > 100){
                         $('.navbar').fadeIn();
+                        $('.navbar').addClass('fixed-top');
                     }else{
                         $('.navbar').fadeOut();
+                        $('.navbar').removeClass('fixed-top');
                     }
                 })
             });
