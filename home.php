@@ -32,25 +32,33 @@ $container   = get_theme_mod( 'understrap_container_type' );
             <div class="row w-100 text-center position-absolute welcome-line-5 d-none-edited" id="welcome-line-5">
                 <div class="col-md-3 col-sm-12 d-inline-block">
                     <div class="bg-brush" >
-                        <a href="<?php echo get_home_url(null,'index.php/home-appliance'); ?>"><h2><span>HOME</span></h2></a>
+                        <a href="<?php echo get_home_url(null,'index.php/home-appliance'); ?>">
+                            <h2 id="intro_item_1"><span>HOME</span></h2>
+                        </a>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-12 d-inline-block">
                     <div class="bg-brush">
-                        <a href="<?php echo get_home_url(null,'index.php/gift'); ?>"><h2><span>GIFT</span></h2></a>
+                        <a href="<?php echo get_home_url(null,'index.php/gift'); ?>">
+                            <h2 id="intro_item_2"><span>GIFT</span></h2>
+                        </a>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-12 d-inline-block">
                     <div class="bg-brush">
-                        <a href="<?php echo get_home_url(null,'index.php/office-decoration'); ?>"><h2><span>OFFICE</span></h2></a>
+                        <a href="<?php echo get_home_url(null,'index.php/office-decoration'); ?>">
+                            <h2 id="intro_item_3"><span>OFFICE</span></h2>
+                        </a>
                     </div>
                 </div>    
-                <div class="col-md-12 d-block">
-                    <p class="small text-white d-block">select or go down</p>
+            </div>
+
+            <div class="col-md-12 text-center align-self-end d-none-edited" id="welcome-line-6">
+                <div class="w-100 align-text-bottom position-relative">
+                    <p class="small text-white d-block">SELECT OR GO-DOWN</p>
                     <div id="scroll-down" class="d-block mx-auto"></div>
                 </div>
             </div>
-
         </div>
 
         <!-- <svg xmlns="http://www.w3.org/2000/svg" id="intro-svg" viewBox="0 0 1920 1080">

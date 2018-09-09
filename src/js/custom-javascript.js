@@ -19,6 +19,7 @@
             var line_3 = $('#welcome-line-3');
             var line_4 = $('#welcome-line-4');
             var line_5 = $('#welcome-line-5');
+            var line_6 = $('#welcome-line-6');
 
             var line_animation = function(selector,delay){
                 var dfd = $.Deferred();
@@ -56,7 +57,8 @@
                     .then(function(){
                         line_animation(line_4,2000)
                         .then(function(){
-                            box_animation(line_5)
+                            box_animation(line_5);
+                            box_animation(line_6);
                         })
                     })
                 })
